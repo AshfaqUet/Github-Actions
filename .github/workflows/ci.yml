@@ -19,6 +19,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Lint Code
+        run: flake8 .
+
       - name: Run tests
         run: |
           pytest
